@@ -1,0 +1,54 @@
+.navbar-ss-v1 {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: #cbdd24;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s ease;
+    width: auto;
+    z-index: 99999;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    width: 35px;
+    overflow: visible;
+    background: transparent;
+    /* color: rgba(255, 255, 255, 0.7); */
+    color: rgba(255, 255, 255, 0.7);
+}
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    width: 120px;
+    color: white;
+}
+.nav-item span {
+    display: none;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    color: black;
+}
+.nav-item:hover span {
+    display: block;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}

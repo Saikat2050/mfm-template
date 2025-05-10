@@ -1,0 +1,111 @@
+/* About.css */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding-top: 5%;
+  }
+  
+  .about-header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+  }
+  
+  .about-intro {
+    margin-bottom: 40px;
+  }
+  
+  .about-description {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .about-image-container {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-story {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-story h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
+  
+  .about-story p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .values-section {
+    margin-top: 40px;
+  }
+  
+  .values-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1a1a1a;
+  }
+  
+  .values-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .values-list li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .value-icon {
+    margin-right: 10px;
+    font-size: 1.4rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+    }
+    
+    .about-header h1 {
+      font-size: 2rem;
+    }
+    
+    .about-story h2,
+    .values-section h2 {
+      font-size: 1.8rem;
+    }
+  }

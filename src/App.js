@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import "./App.css";
+import Navbar from "./navbar";
+import Footer from "./footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./home";
+import About from "./about";
+import Offerings from "./offerings";
+import Contact from "./contact";
+import { Toaster } from "react-hot-toast";
+import axios from 'axios';
 
 function App() {
+  setInterval(async function () {
+    try {
+      await axios.get(`${process.env.REACT_APP_BASE_URL}/health`);
+    } catch (error) {
+      console.error(error);
+    }
+  }, 250000);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Toaster position="top-right" reverseOrder={false} />
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about-us" element={<About />} />
+            <Route path="/offerings" element={<Offerings />} />
+            <Route path="/contact-us" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
