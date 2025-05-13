@@ -8,16 +8,8 @@ import About from "./about";
 import Offerings from "./offerings";
 import Contact from "./contact";
 import { Toaster } from "react-hot-toast";
-import axios from 'axios';
 
 function App() {
-  setInterval(async function () {
-    try {
-      await axios.get(`${process.env.REACT_APP_BASE_URL}/health`);
-    } catch (error) {
-      console.error(error);
-    }
-  }, 250000);
   return (
     <Router>
       <Toaster position="top-right" reverseOrder={false} />
